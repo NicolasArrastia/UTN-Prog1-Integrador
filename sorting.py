@@ -76,6 +76,49 @@ def selection_sort(lista_original, delay_segundos=0, mostrar_pasos=False):
     return lista, comparaciones
 
 
+def merge_sort(lista_original, delay_segundos=0, mostrar_pasos=False):
+    lista = lista_original[:]
+    comparaciones = 0
+
+    def merge_sort_recursivo(sublista):
+        nonlocal comparaciones
+        if len(sublista) <= 1:
+            return sublista
+
+        medio = len(sublista) // 2
+        izquierda = merge_sort_recursivo(sublista[:medio])
+        derecha = merge_sort_recursivo(sublista[medio:])
+
+        return mergear(izquierda, derecha)
+
+    def mergear(izquierda, derecha):
+        nonlocal comparaciones
+        resultado = []
+        i = j = 0
+
+        while i < len(izquierda) and j < len(derecha):
+            comparaciones += 1
+            if mostrar_pasos:
+                print_step()
+
+            if izquierda[i] <= derecha[j]:
+                resultado.append(izquierda[i])
+                i += 1
+            else:
+                resultado.append(derecha[j])
+                j += 1
+
+            time.sleep(delay_segundos)
+
+        resultado.extend(izquierda[i:])
+        resultado.extend(derecha[j:])
+        return resultado
+
+    lista = merge_sort_recursivo(lista)
+    print()
+    return lista, comparaciones
+
+
 def quick_sort(lista_original, delay_segundos=0, mostrar_pasos=False):
     lista = lista_original[:]
     comparaciones = 0
