@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import random
 from searching import busqueda_lineal, busqueda_binaria
 import os
-import time
 from sorting import bubble_sort, merge_sort, selection_sort, insertion_sort, quick_sort
 from utils import generar_lista_desordenada, timer
 
