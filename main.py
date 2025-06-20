@@ -76,7 +76,7 @@ print(f"Quick Sort:\t\t{tiempo_quick:.{DECIMALS}f} segundos")
 print("\n=== Búsqueda ===")
 
 random_number = random.choice(range(1, AMOUNT + 1))
-print(f"\nBuscando el número {random_number} en el arreglo desordenado:")
+print(f"\nBuscando el número {random_number} en el arreglo ordenado:")
 
 # Linear Search
 input("\n> Linear Search")
