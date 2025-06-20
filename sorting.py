@@ -27,30 +27,6 @@ def bubble_sort(lista_original, delay_segundos=0, mostrar_pasos=False):
     return lista, comparaciones
 
 
-def insertion_sort(lista_original, delay_segundos=0, mostrar_pasos=False):
-    lista = lista_original[:]
-    comparaciones = 0
-    n = len(lista)
-
-    # Comenzar desde el segundo elemento y recorrer toda la lista
-    for i in range(1, n):
-        llave = lista[i]
-        j = i - 1
-
-        # Mover elementos mayores a la llave hacia la derecha
-        while j >= 0 and lista[j] > llave:
-            comparaciones += 1
-            lista[j + 1] = lista[j]
-            j -= 1
-            if mostrar_pasos:
-                print_step()
-            time.sleep(delay_segundos)
-        lista[j + 1] = llave
-
-    print()  # Nueva línea al finalizar la pasada
-    return lista, comparaciones
-
-
 def selection_sort(lista_original, delay_segundos=0, mostrar_pasos=False):
     lista = lista_original[:]
     comparaciones = 0
@@ -72,6 +48,30 @@ def selection_sort(lista_original, delay_segundos=0, mostrar_pasos=False):
         lista[i], lista[indice_minimo] = lista[indice_minimo], lista[i]
 
         time.sleep(delay_segundos)
+    print()  # Nueva línea al finalizar la pasada
+    return lista, comparaciones
+
+
+def insertion_sort(lista_original, delay_segundos=0, mostrar_pasos=False):
+    lista = lista_original[:]
+    comparaciones = 0
+    n = len(lista)
+
+    # Comenzar desde el segundo elemento y recorrer toda la lista
+    for i in range(1, n):
+        llave = lista[i]
+        j = i - 1
+
+        # Mover elementos mayores a la llave hacia la derecha
+        while j >= 0 and lista[j] > llave:
+            comparaciones += 1
+            lista[j + 1] = lista[j]
+            j -= 1
+            if mostrar_pasos:
+                print_step()
+            time.sleep(delay_segundos)
+        lista[j + 1] = llave
+
     print()  # Nueva línea al finalizar la pasada
     return lista, comparaciones
 
