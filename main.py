@@ -5,23 +5,20 @@ import os
 from sorting import bubble_sort, merge_sort, selection_sort, insertion_sort, quick_sort
 from utils import generar_lista_desordenada, timer
 
-SORT_DELAY = 0.01  # Tiempo de espera entre pasos de ordenamiento en segundos
-SEARCH_DELAY = 0.01  # Tiempo de espera entre pasos de busqueda en segundos
-AMOUNT = 20  # Cantidad de elementos en el arreglo desordenado
+SORT_DELAY = 0  # Tiempo de espera entre pasos de ordenamiento en segundos
+SEARCH_DELAY = 0  # Tiempo de espera entre pasos de busqueda en segundos
+AMOUNT = 2000  # Cantidad de elementos en el arreglo desordenado
 DECIMALS = 5  # Decimales para mostrar los tiempos de ejecución
 # Mostrar o no los pasos de ordenamiento, búsqueda y el arreglo desordenado
-SHOW_STEPS = True
+SHOW_STEPS = False
 
 
 os.system('cls' if os.name == 'nt' else 'clear')  # Limpiar la consola
 print("=== Algoritmos de Ordenamiento y Búsqueda ===\n")
 
-print(f"Generado un arreglo desordenado de {AMOUNT} elementos:")
-
 arreglo_desordenado = generar_lista_desordenada(AMOUNT)
 
-if SHOW_STEPS:
-    print("Arreglo desordenado:", arreglo_desordenado)
+print(f"Generado un arreglo desordenado de {AMOUNT} elementos:")
 
 print("\n=== Ordenamiento ===")
 
@@ -60,6 +57,7 @@ comparaciones_insertion = resultado_insertion[1]
 comparaciones_selection = resultado_selection[1]
 comparaciones_merge = resultado_merge[1]
 comparaciones_quick = resultado_quick[1]
+input(f"\n> Mostrar Resultados")
 
 print("\nComparaciones realizadas:")
 print(f"Bubble Sort:\t\t{comparaciones_bubble}")
@@ -83,7 +81,7 @@ print(f"\nBuscando el número {random_number} en el arreglo desordenado:")
 # Linear Search
 input("\n> Linear Search")
 resultado_lineal, tiempo_lineal = timer(
-    busqueda_lineal, arreglo_desordenado, random_number, SEARCH_DELAY, SHOW_STEPS)
+    busqueda_lineal, resultado_bubble[0], random_number, SEARCH_DELAY, SHOW_STEPS)
 print(
     f"\nÍndice encontrado: {resultado_lineal[0]}, Comparaciones: {resultado_lineal[1]}")
 print(f"Tiempo de ejecución: {tiempo_lineal:.{DECIMALS}f} segundos")
@@ -91,12 +89,12 @@ print(f"Tiempo de ejecución: {tiempo_lineal:.{DECIMALS}f} segundos")
 # Binary Search
 input("\n> Binary Search")
 resultado_binario, tiempo_binario = timer(busqueda_binaria, sorted(
-    arreglo_desordenado), random_number, SEARCH_DELAY, SHOW_STEPS)
+    resultado_bubble[0]), random_number, SEARCH_DELAY, SHOW_STEPS)
 print(
     f"\nÍndice encontrado: {resultado_binario[0]}, Comparaciones: {resultado_binario[1]}")
 print(f"Tiempo de ejecución: {tiempo_binario:.{DECIMALS}f} segundos")
 
-input("> Mostrar gráficos de resultados")
+input("\n> Mostrar gráficos de resultados")
 
 # === Graficos ===
 
