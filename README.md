@@ -7,7 +7,7 @@ Mariano Astorga
 
 ## PDF
 
-https://docs.google.com/document/d/1tbPbSxdJ4DLdApGEgeuYNcqGlqGex0NE6lIL8-J8ZI8/edit?usp=sharing
+https://drive.google.com/file/d/1jbEt_iNmH6sFt3HMeuIx1-8KHGzuwy1S/view?usp=sharing
 
 ## Video YouTube
 
