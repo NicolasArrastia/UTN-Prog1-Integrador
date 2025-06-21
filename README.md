@@ -5,10 +5,14 @@
 Nicolás Arrastía
 Mariano Astorga
 
-## Link al video de YouTube
+## PDF
 
-https://youtu.be/YrDKrxED9jg
+https://docs.google.com/document/d/1tbPbSxdJ4DLdApGEgeuYNcqGlqGex0NE6lIL8-J8ZI8/edit?usp=sharing
 
-## Link al PPT de la presentación
+## Video YouTube
 
-https://docs.google.com/presentation/d/1twqEFlCFETRsPkHLpb8wePxwfmU3T2kDwWjIIIOvm00/edit?usp=drive_link
+https://youtu.be/AtE0HO01RNg
+
+## Google Slides
+
+https://docs.google.com/presentation/d/1vw2DWgMxB9wmQVKOFWWiCv0fjh2i19mdQiGEWKv2NLc/edit?usp=sharing
